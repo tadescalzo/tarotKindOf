@@ -1,0 +1,473 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+
+body {
+  padding: 0%;
+  margin: 0%;
+  background-color: #19161d;
+  position: relative;
+}
+
+/*ESTILOS GENERAL*/
+.general {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.gradient {
+  width: 100%;
+  height: 50px;
+  background: rgb(31, 30, 38);
+  background: linear-gradient(
+    0deg,
+    rgba(31, 30, 38, 1) 16%,
+    rgba(102, 24, 211, 0) 100%
+  );
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+.circle1 {
+  width: 140px;
+  height: 140px;
+  background-color: #9f1da8;
+  position: absolute;
+  left: 10%;
+  top: 70%;
+  border-radius: 50%;
+  -webkit-filter: blur(15px);
+  opacity: 40%;
+  z-index: -1;
+  animation-name: animation1;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes animation1 {
+  0% {
+    background-color: #b49c67;
+  }
+  50% {
+    background-color: #ece9da;
+  }
+  100% {
+    background-color: #b49c67;
+  }
+}
+
+.circle2 {
+  width: 190px;
+  height: 190px;
+  background-color: #6618d3;
+  position: absolute;
+  right: 10%;
+  bottom: 70%;
+  border-radius: 50%;
+  -webkit-filter: blur(15px);
+  opacity: 40%;
+  z-index: -1;
+  animation-name: animation2;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes animation2 {
+  0% {
+    background-color: #ece9da;
+  }
+  50% {
+    background-color: #b49c67;
+  }
+  100% {
+    background-color: #ece9da;
+  }
+}
+
+/*HEADER*/
+header {
+  color: #e7e7e7;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+header h1 {
+  background: #ece9da;
+  background: linear-gradient(90deg, #ece9da 1%, #b49c67 84%);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  font-weight: 700;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+/*INTERFAZ NOMBRES JUGADORES INICIAL*/
+#pantallaNombres {
+  width: 100%;
+}
+
+.pantallaNombresInterfaz {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.pantallaNombresInd {
+  color: #e7e7e7;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#pantallaNombresJugadores {
+  background-color: #1f1e26a6;
+  width: 80%;
+  height: 50vh;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  box-shadow: 0 8px 32px 0 rgba(86, 89, 133, 0.37);
+}
+
+#pantallaNombres1,
+#pantallaNombres2 {
+  font-family: "Open Sans", sans-serif;
+  color: #333;
+  font-size: 15px;
+  padding: 10px 10px;
+  border-radius: 10px;
+  background-color: rgb(165, 165, 165);
+  border: none;
+  width: 80%;
+  display: block;
+  transition: all 0.3s;
+  text-align: center;
+  outline: none;
+  box-shadow: 0 2px 2px 0 rgba(1, 1, 1, 0.7);
+}
+
+#pantallaNombresLaunch {
+  color: #333;
+  text-decoration: none;
+  background: #ece9da;
+  background: linear-gradient(190deg, #ece9da 1%, #b49c67 94%);
+  background-size: 100%;
+  background-repeat: repeat;
+  -moz-text-fill-color: transparent;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  width: 60%;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+/*PANTALLA JUGADAS ANTERIORES*/
+
+#pantallaNombresJugadas {
+  background-color: #1f1e26a6;
+  width: 80%;
+  border-radius: 20px;
+  text-align: center;
+  color: #e7e7e7;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  margin-top: 10px;
+}
+
+#pantallaNombresJugadas img {
+  width: 50px;
+}
+
+#pantallaNombresListita li {
+  background-color: #1f1e26a6;
+  color: #e7e7e7;
+}
+
+/*PANTALLA CARGA*/
+#pantallaCarga {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+#pantallaCarga img {
+  width: 100px;
+}
+
+/*PANTALLA CARTAS*/
+
+#pantallaCartas {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#pantallaCartas img {
+  height: 350px;
+}
+
+.pantallaCartasInterfaz {
+  width: 90%;
+  height: 95vh;
+  background-color: #1f1e26a6;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+}
+
+#pantallaCartasCerrar {
+  position: absolute;
+  top: 2%;
+  right: 5%;
+  color: white;
+  font-size: 25px;
+  z-index: 1;
+}
+
+#carouselExampleIndicators {
+  width: 100%;
+  height: 100%;
+}
+
+#carouselExampleIndicators {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-item {
+  width: 100%;
+  color: #ece9da;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+.carousel-item img {
+  width: 250px;
+}
+
+.carousel-item p {
+  width: 80%;
+  margin: 10%;
+}
+
+.carousel-inner {
+  min-height: 80vh;
+}
+
+.carousel-control-prev {
+  width: 50px;
+  height: 50px;
+  left: 1%;
+  top: 50%;
+}
+
+.carousel-control-next {
+  width: 50px;
+  height: 50px;
+  right: 1%;
+  top: 50%;
+}
+
+#pantallaCartasSiguiente {
+  background: rgb(121, 54, 255);
+  background: linear-gradient(
+    331deg,
+    rgba(121, 54, 255, 1) 35%,
+    rgba(164, 121, 251, 1) 100%
+  );
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: none;
+  color: #e7e7e7;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 10px;
+  outline: none;
+  z-index: 1;
+}
+
+.compatible {
+  color: green;
+}
+
+.noCompatible {
+  color: red;
+}
+
+/*PANTALLA REROLL*/
+#pantallaReroll {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pantallaRerollInterfaz {
+  width: 90%;
+  height: 80vh;
+  background-color: #1f1e26a6;
+  border-radius: 10px;
+  position: relative;
+  color: #e7e7e7;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.pantallaRerollBotones {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#pantallaRerollReroll {
+  background: rgb(121, 54, 255);
+  background: linear-gradient(
+    331deg,
+    rgba(121, 54, 255, 1) 35%,
+    rgba(164, 121, 251, 1) 100%
+  );
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: none;
+  color: #e7e7e7;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 10px;
+  outline: none;
+}
+
+#pantallaRerrollGuardar {
+  background: rgb(216, 36, 112);
+  background: linear-gradient(
+    331deg,
+    rgba(216, 36, 112, 1) 35%,
+    rgba(214, 69, 130, 1) 100%
+  );
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: none;
+  color: #e7e7e7;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 10px;
+  outline: none;
+}
+
+/*PANTALLA FINAL*/
+#pantallaFinal {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pantallaFinalInterfaz {
+  width: 90%;
+  height: 90vh;
+  background-color: #1f1e26a6;
+  border-radius: 10px;
+  position: relative;
+  color: #e7e7e7;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#pantallaFinalPrimero,
+#pantallaFinalSegundo {
+  width: 100%;
+}
+
+#pantallaFinalPrimeroImgs,
+#pantallaFinalSegundoImgs {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#pantallaFinalSegundoImgs img {
+  margin: 10px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#pantallaFinalPrimero img {
+  margin: 10px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#pantallaFinalCerrar {
+  position: absolute;
+  top: 2%;
+  right: 5%;
+  color: white;
+  font-size: 25px;
+}
+
+/*OCULTAR PANTALLAS*/
+
+#pantallaCartas,
+#pantallaFinal,
+#pantallaReroll,
+#pantallaCarga,
+#pantallaNombresJugadas {
+  display: none;
+}
